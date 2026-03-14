@@ -78,17 +78,15 @@ Key improvements included:
 ForeCash combines financial data processing with predictive models.
 
 Core components include:
-User Input
-↓
-Transaction Data Pipeline
-↓
-Time-Series Storage
-↓
-Forecasting Models
-↓
-Prediction Engine
-↓
-Dashboard + AI Assistant
+
+```mermaid
+graph TD
+    A[User Input] --> B[Transaction Data Pipeline]
+    B --> C[Time-Series Storage]
+    C --> D[Forecasting Models]
+    D --> E[Prediction Engine]
+    E --> F[Dashboard + AI Assistant]
+```
 
 ### Forecasting Model
 The prototype uses a hybrid forecasting approach:
