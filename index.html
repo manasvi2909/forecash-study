@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForeCash | UX Case Study</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- Ambient Background Blobs -->
+    <div class="ambient-blob blob-1"></div>
+    <div class="ambient-blob blob-2"></div>
+    <div class="ambient-blob blob-3"></div>
+
+    <!-- 1. HERO SECTION -->
+    <section class="hero-section section-spacing" id="hero">
+        <div class="container text-center" style="position:relative;">
+            <!-- Decorative Edition font BG watermark -->
+            <span class="hero-edition-bg" aria-hidden="true">ForeCash</span>
+            <!-- Logo icon -->
+            <div class="hero-logo-lockup animate-up">
+                <img loading="lazy" src="logo.png" alt="ForeCash Logo" class="hero-logo-img">
+            </div>
+            <!-- Wordmark in Proxima Nova -->
+            <h1 class="title animate-up" style="transition-delay:0.05s;">Fore<span style="color:#4A9B5F;">Cash</span></h1>
+            <h2 class="tagline animate-up" style="transition-delay: 0.1s;">Money, when it finally talks.</h2>
+            <p class="subtitle max-w-lg mx-auto animate-up" style="transition-delay: 0.2s;">
+                A financial forecasting platform designed to help users predict future cash flow, evaluate financial
+                decisions, and plan ahead with confidence.
+            </p>
+
+            <div class="browser-mockup massive shadow-glow animate-up" style="transition-delay: 0.3s;">
+                <div class="browser-header">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
+                <div class="image-placeholder desktop-screen">
+                    <img src="Landing Page (Completed).png" alt="ForeCash Landing Page">
+                </div>
+            </div>
+
+            <!-- Status Badge -->
+            <div class="hero-status-badge animate-up" style="transition-delay:0.4s; margin-top: 4rem; margin-bottom: 0; font-size: 0.85rem; padding: 0.6rem 1.5rem;">
+                <span class="status-pulse"></span>
+                Prototype launching soon &mdash; an interactive preview of ForeCash&rsquo;s forecasting engine and financial decision assistant.
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 2. PROBLEM STATEMENT -->
+    <section class="problem-section section-spacing" id="problem">
+        <div class="container">
+            <div class="grid-2 align-center alternating-row">
+                <div class="text-content pr-lg animate-up">
+                    <div class="section-label">01 / The Problem</div>
+                    <h2 class="section-heading">Looking back instead of forward.</h2>
+                    <p class="paragraph">Most traditional personal finance tools focus entirely on tracking past
+                        spending. Users know where their money went, but constantly struggle to understand their
+                        financial future.</p>
+                    <div class="insight-box mt-4">
+                        <p class="insight-text">"Can I afford a large purchase next month?"</p>
+                        <p class="insight-text">"Will my balance drop below a safe level?"</p>
+                        <p class="insight-text">"How should I adjust my spending before a big decision?"</p>
+                    </div>
+                </div>
+                <div class="browser-mockup subtle-shadow animate-up">
+                    <div class="browser-header">
+                        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    </div>
+                    <div class="image-placeholder app-context">
+                        <img loading="lazy" src="expense log (completed).png" alt="Expense Log View">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- RESEARCH SECTION -->
+    <section class="research-section section-spacing" id="research">
+        <div class="container">
+            <div class="section-label text-accent">02 / Research</div>
+            <h2 class="section-heading">Understanding the user.</h2>
+            <p class="paragraph text-secondary max-w-lg mb-6">Before designing a single screen, we spoke to real users about how they manage money and where their frustrations lie.</p>
+
+            <div class="grid-2 gap-xl">
+                <!-- User Interviews -->
+                <div class="animate-up">
+                    <h3 class="subsection-heading mb-4">User Interviews</h3>
+                    <div class="research-interviews">
+                        <div class="interview-card">
+                            <div class="interview-avatar">S</div>
+                            <div class="interview-body">
+                                <p class="interview-quote">&ldquo;I check my bank balance before every purchase. I have no idea where most of my money actually goes at the end of the month.&rdquo;</p>
+                                <span class="interview-tag">Sanya, 26 &mdash; Postgraduate student</span>
+                            </div>
+                        </div>
+                        <div class="interview-card">
+                            <div class="interview-avatar">R</div>
+                            <div class="interview-body">
+                                <p class="interview-quote">&ldquo;I tried YNAB for two weeks. The manual entry was exhausting. I gave up.&rdquo;</p>
+                                <span class="interview-tag">Rithik, 29 &mdash; Junior software engineer</span>
+                            </div>
+                        </div>
+                        <div class="interview-card">
+                            <div class="interview-avatar">P</div>
+                            <div class="interview-body">
+                                <p class="interview-quote">&ldquo;Tax season is a nightmare. I never know what I owe until my accountant tells me in April.&rdquo;</p>
+                                <span class="interview-tag">Priya, 34 &mdash; Freelance designer</span>
+                            </div>
+                        </div>
+                        <div class="interview-card">
+                            <div class="interview-avatar">M</div>
+                            <div class="interview-body">
+                                <p class="interview-quote">&ldquo;I'd love to know if I can afford a new laptop next month without hurting my savings goal.&rdquo;</p>
+                                <span class="interview-tag">Marc, 31 &mdash; Product manager</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pain Points -->
+                <div class="animate-up">
+                    <h3 class="subsection-heading mb-4">Financial Planning Pain Points</h3>
+                    <div class="pain-points-list">
+                        <div class="pain-point-item">
+                            <div class="pain-point-num">01</div>
+                            <div>
+                                <h4 class="pain-point-title">Reactive budgeting</h4>
+                                <p class="text-secondary text-sm">Users discover they've overspent only after the fact. No app warns them proactively.</p>
+                            </div>
+                        </div>
+                        <div class="pain-point-item">
+                            <div class="pain-point-num">02</div>
+                            <div>
+                                <h4 class="pain-point-title">Manual logging fatigue</h4>
+                                <p class="text-secondary text-sm">Existing tools require too much manual input. Users drop off within weeks.</p>
+                            </div>
+                        </div>
+                        <div class="pain-point-item">
+                            <div class="pain-point-num">03</div>
+                            <div>
+                                <h4 class="pain-point-title">No forward-looking view</h4>
+                                <p class="text-secondary text-sm">Every current tool shows the past. None help users understand their financial future.</p>
+                            </div>
+                        </div>
+                        <div class="pain-point-item">
+                            <div class="pain-point-num">04</div>
+                            <div>
+                                <h4 class="pain-point-title">Tax anxiety</h4>
+                                <p class="text-secondary text-sm">Self-employed users feel blindsided by tax obligations. There's no integrated planning.</p>
+                            </div>
+                        </div>
+                        <div class="pain-point-item">
+                            <div class="pain-point-num">05</div>
+                            <div>
+                                <h4 class="pain-point-title">Decision paralysis</h4>
+                                <p class="text-secondary text-sm">Users can't confidently evaluate large purchases against their long-term goals.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Close grid-2 -->
+            
+            <!-- Personas -->
+            <div class="mt-6 animate-up" id="personas">
+                <h3 class="subsection-heading mb-4">User Personas</h3>
+                <div class="persona-grid">
+
+                    <div class="persona-card">
+                        <div class="persona-header">
+                            <div class="persona-avatar" style="background:#4A9B5F;">S</div>
+                            <div>
+                                <div class="persona-name">Sanya, 26</div>
+                                <div class="persona-role">Postgraduate Student</div>
+                            </div>
+                        </div>
+                        <div class="persona-body">
+                            <div class="persona-section">
+                                <div class="persona-label"><i data-lucide="target"></i> Goals</div>
+                                <ul>
+                                    <li>Understand where her money disappears each month</li>
+                                    <li>Save for a solo trip without giving up day-to-day spending</li>
+                                </ul>
+                            </div>
+                            <div class="persona-section">
+                                <div class="persona-label persona-label--red"><i data-lucide="alert-circle"></i> Frustrations</div>
+                                <ul>
+                                    <li>Checks balance reactively, not proactively</li>
+                                    <li>No visibility into spending categories</li>
+                                </ul>
+                            </div>
+                            <div class="persona-section">
+                                <div class="persona-label persona-label--yellow"><i data-lucide="activity"></i> Behaviours</div>
+                                <ul>
+                                    <li>Uses Google Sheets sporadically</li>
+                                    <li>Pays with UPI almost exclusively</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="persona-card">
+                        <div class="persona-header">
+                            <div class="persona-avatar" style="background:#4A7CB5;">P</div>
+                            <div>
+                                <div class="persona-name">Priya, 34</div>
+                                <div class="persona-role">Freelance Designer</div>
+                            </div>
+                        </div>
+                        <div class="persona-body">
+                            <div class="persona-section">
+                                <div class="persona-label"><i data-lucide="target"></i> Goals</div>
+                                <ul>
+                                    <li>Forecast income across variable project payments</li>
+                                    <li>Avoid tax surprises at year-end</li>
+                                </ul>
+                            </div>
+                            <div class="persona-section">
+                                <div class="persona-label persona-label--red"><i data-lucide="alert-circle"></i> Frustrations</div>
+                                <ul>
+                                    <li>Tax liability only known after CA consultation</li>
+                                    <li>No tool handles irregular income well</li>
+                                </ul>
+                            </div>
+                            <div class="persona-section">
+                                <div class="persona-label persona-label--yellow"><i data-lucide="activity"></i> Behaviours</div>
+                                <ul>
+                                    <li>Tracks invoices in Notion</li>
+                                    <li>Sets aside % of each payment manually</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="persona-card">
+                        <div class="persona-header">
+                            <div class="persona-avatar" style="background:#9B4A8F;">M</div>
+                            <div>
+                                <div class="persona-name">Marc, 31</div>
+                                <div class="persona-role">Product Manager</div>
+                            </div>
+                        </div>
+                        <div class="persona-body">
+                            <div class="persona-section">
+                                <div class="persona-label"><i data-lucide="target"></i> Goals</div>
+                                <ul>
+                                    <li>Make confident large purchase decisions</li>
+                                    <li>Track progress toward a home down-payment goal</li>
+                                </ul>
+                            </div>
+                            <div class="persona-section">
+                                <div class="persona-label persona-label--red"><i data-lucide="alert-circle"></i> Frustrations</div>
+                                <ul>
+                                    <li>Can't assess affordability without running manual numbers</li>
+                                    <li>Existing apps show history, not future</li>
+                                </ul>
+                            </div>
+                            <div class="persona-section">
+                                <div class="persona-label persona-label--yellow"><i data-lucide="activity"></i> Behaviours</div>
+                                <ul>
+                                    <li>Heavy spreadsheet user on weekends</li>
+                                    <li>Researches purchases 2–3 weeks in advance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- User Journey Map -->
+            <div class="mt-6 animate-up" id="journey-map">
+                <h3 class="subsection-heading mb-1">User Journey</h3>
+                <p class="text-secondary text-sm mb-4">How a user's financial relationship evolves — and where ForeCash intervenes.</p>
+                <div class="journey-map">
+
+                    <div class="journey-stage">
+                        <div class="journey-stage-icon"><i data-lucide="eye"></i></div>
+                        <div class="journey-stage-name">Budget Awareness</div>
+                        <div class="journey-stage-desc">User realises they lack visibility into their actual spending. Motivated to change.</div>
+                        <div class="journey-stage-emotion">
+                            <span class="emotion-dot emotion-neutral"></span><span class="emotion-label">Uncertain</span>
+                        </div>
+                    </div>
+                    <div class="journey-arrow"><i data-lucide="arrow-right"></i></div>
+
+                    <div class="journey-stage">
+                        <div class="journey-stage-icon"><i data-lucide="list"></i></div>
+                        <div class="journey-stage-name">Expense Tracking</div>
+                        <div class="journey-stage-desc">Starts logging transactions. Builds a picture of recurring costs and spending patterns.</div>
+                        <div class="journey-stage-emotion">
+                            <span class="emotion-dot emotion-neutral"></span><span class="emotion-label">Engaged</span>
+                        </div>
+                    </div>
+                    <div class="journey-arrow"><i data-lucide="arrow-right"></i></div>
+
+                    <div class="journey-stage">
+                        <div class="journey-stage-icon"><i data-lucide="cloud"></i></div>
+                        <div class="journey-stage-name">Financial Uncertainty</div>
+                        <div class="journey-stage-desc">Faces a big decision — a purchase, tax season, or salary change — with no clear picture of the future.</div>
+                        <div class="journey-stage-emotion">
+                            <span class="emotion-dot emotion-negative"></span><span class="emotion-label">Anxious</span>
+                        </div>
+                    </div>
+                    <div class="journey-arrow"><i data-lucide="arrow-right"></i></div>
+
+                    <div class="journey-stage">
+                        <div class="journey-stage-icon"><i data-lucide="help-circle"></i></div>
+                        <div class="journey-stage-name">Decision Making</div>
+                        <div class="journey-stage-desc">Asks ForeCash's AI assistant. Gets a reasoned, data-backed answer grounded in their actual numbers.</div>
+                        <div class="journey-stage-emotion">
+                            <span class="emotion-dot emotion-neutral"></span><span class="emotion-label">Curious</span>
+                        </div>
+                    </div>
+                    <div class="journey-arrow"><i data-lucide="arrow-right"></i></div>
+
+                    <div class="journey-stage journey-stage--highlight">
+                        <div class="journey-stage-icon"><i data-lucide="trending-up"></i></div>
+                        <div class="journey-stage-name">Forecast Assistance</div>
+                        <div class="journey-stage-desc">Views 90-day cash flow projection. Confident, proactive decisions replace reactive guesswork.</div>
+                        <div class="journey-stage-emotion">
+                            <span class="emotion-dot emotion-positive"></span><span class="emotion-label">Confident</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="competitor-section bg-dark section-spacing" id="competitors">
+        <div class="container">
+            <div class="section-label text-accent">03 / Competitor Analysis</div>
+            <h2 class="section-heading text-white">Where the market falls short.</h2>
+            <p class="paragraph text-gray-300 max-w-lg mb-6">We studied the top personal finance apps to identify the gaps ForeCash is uniquely positioned to fill.</p>
+
+            <div class="competitor-table-wrap animate-up">
+                <table class="competitor-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Mint</th>
+                            <th>YNAB</th>
+                            <th>Copilot</th>
+                            <th>Monarch</th>
+                            <th class="forecash-col">Fore<span style="color:#4A9B5F">Cash</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Manual transaction logging</td>
+                            <td class="cross"><i data-lucide="x"></i></td>
+                            <td class="check"><i data-lucide="check"></i></td>
+                            <td class="cross"><i data-lucide="x"></i></td>
+                            <td class="cross"><i data-lucide="x"></i></td>
+                            <td class="check forecash-col"><i data-lucide="check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>ML-powered cash flow forecasting</td>
+                            <td class="cross"><i data-lucide="x"></i></td>
+                            <td class="cross"><i data-lucide="x"></i></td>
+                            <td class="cross"><i data-lucide="x"></i></td>
+                            <td class="partial"><i data-lucide="minus"></i></td>
+                            <td class="check forecash-col"><i data-lucide="check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>AI financial assistant</td>
+                            <td class="cross"><i data-lucide="x"></i></td>
+                            <td class="cross"><i data-lucide="x"></i></td>
+                            <td class="partial"><i data-lucide="minus"></i></td>
+                            <td class="cross"><i data-lucide="x"></i></td>
+                            <td class="check forecash-col"><i data-lucide="check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Integrated tax estimation</td>
+                            <td class="partial"><i data-lucide="minus"></i></td>
+                            <td class="cross"><i data-lucide="x"></i></td>
+                            <td class="cross"><i data-lucide="x"></i></td>
+                            <td class="cross"><i data-lucide="x"></i></td>
+                            <td class="check forecash-col"><i data-lucide="check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Goal-based decision support</td>
+                            <td class="cross"><i data-lucide="x"></i></td>
+                            <td class="check"><i data-lucide="check"></i></td>
+                            <td class="cross"><i data-lucide="x"></i></td>
+                            <td class="check"><i data-lucide="check"></i></td>
+                            <td class="check forecash-col"><i data-lucide="check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Empty-state onboarding</td>
+                            <td class="cross"><i data-lucide="x"></i></td>
+                            <td class="partial"><i data-lucide="minus"></i></td>
+                            <td class="check"><i data-lucide="check"></i></td>
+                            <td class="check"><i data-lucide="check"></i></td>
+                            <td class="check forecash-col"><i data-lucide="check"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="competitor-legend"><i data-lucide="check" style="width:12px;height:12px;"></i> Full support &nbsp;&nbsp; <i data-lucide="minus" style="width:12px;height:12px;"></i> Partial &nbsp;&nbsp; <i data-lucide="x" style="width:12px;height:12px;"></i> Not available</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. PRODUCT VISION -->
+    <section class="vision-section bg-dark section-spacing" id="vision">
+        <div class="container text-center">
+            <div class="section-label text-accent">02 / Product Vision</div>
+            <h2 class="section-heading text-white">From tracking to forecasting.</h2>
+            <p class="paragraph text-gray-300 max-w-lg mx-auto mb-5">
+                ForeCash represents a paradigm shift in personal finance. It's an intelligent ecosystem built to
+                evaluate, predict, and optimize.
+            </p>
+
+            <div class="grid-3 stats-grid animate-up">
+                <div class="stat-card">
+                    <div class="stat-icon"><i data-lucide="trending-up"></i></div>
+                    <h4 class="text-white">Predict</h4>
+                    <p class="text-gray-400">Future cash flow based on recurring trends</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i data-lucide="scale"></i></div>
+                    <h4 class="text-white">Evaluate</h4>
+                    <p class="text-gray-400">Financial decisions before making them</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i data-lucide="shield-check"></i></div>
+                    <h4 class="text-white">Identify</h4>
+                    <p class="text-gray-400">Financial risk and optimize tax strategies</p>
+                </div>
+            </div>
+
+            <div class="browser-mockup mt-6 glow-mockup animate-up">
+                <div class="browser-header dark-header">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
+                <div class="image-placeholder desktop-screen dark-placeholder">
+                    <img loading="lazy" src="dashboard (dark).png" alt="ForeCash Dark Dashboard">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. MY ROLE & 5. TARGET USERS -->
+    <section class="context-section section-spacing" id="context">
+        <div class="container">
+            <div class="grid-2 gap-xl">
+                <!-- Role -->
+                <div class="info-block animate-up">
+                    <div class="section-label">03 / Project Scope</div>
+                    <h2 class="section-heading mb-2">The Team &amp; Role</h2>
+                    <p class="paragraph text-sm mb-4" style="font-size:0.9rem;">
+                        ForeCash is a <strong>Level 0 functional prototype</strong> — all screens are fully interactive and
+                        navigable, transactions are logged manually by the user, and ML forecasts run on the data entered
+                        within the session. It is not connected to any external bank or financial account. The prototype
+                        supports the complete core user journey: onboarding → transaction logging → cash flow forecasting →
+                        AI assistant → tax estimation, with real computed outputs based on user-entered figures.
+                        It is demonstration-ready and has been validated with 5 usability test participants.
+                    </p>
+
+                    <div class="role-grid">
+                        <div class="role-column">
+                            <h4 class="text-accent mb-2">My Contributions</h4>
+                            <ul class="clean-list">
+                                <li>UI / UX Design</li>
+                                <li>Frontend Implementation</li>
+                                <li>Dashboard Architecture</li>
+                                <li>Interaction Design</li>
+                                <li>Component System</li>
+                                <li>ML Model Integration (UI layer)</li>
+                                <li>Forecast Visualisation</li>
+                            </ul>
+                        </div>
+                        <div class="role-column">
+                            <h4 class="text-gray mb-2">Team Contributions</h4>
+                            <ul class="clean-list">
+                                <li>ML Forecasting Models (ARIMA + LSTM)</li>
+                                <li>Prediction Pipeline Design</li>
+                                <li>Database Infrastructure</li>
+                                <li>Backend Engineering</li>
+                                <li>Frontend Implementation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Users -->
+                <div class="info-block animate-up" style="transition-delay: 0.1s;">
+                    <div class="section-label">04 / Audience</div>
+                    <h2 class="section-heading mb-4">Target Users</h2>
+
+                    <div class="user-cards-vertical">
+                        <div class="user-row">
+                            <div class="user-avatar text-accent">YP</div>
+                            <div>
+                                <h4>Young Professionals</h4>
+                                <p class="text-sm text-secondary">Managing salary and expenses</p>
+                            </div>
+                        </div>
+                        <div class="user-row">
+                            <div class="user-avatar text-accent">ST</div>
+                            <div>
+                                <h4>Students</h4>
+                                <p class="text-sm text-secondary">Managing limited or irregular income</p>
+                            </div>
+                        </div>
+                        <div class="user-row">
+                            <div class="user-avatar text-accent">FL</div>
+                            <div>
+                                <h4>Freelancers</h4>
+                                <p class="text-sm text-secondary">With unpredictable income streams</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PRODUCT JOURNEY OVERVIEW -->
+    <section class="journey-section bg-subtle section-spacing" id="journey">
+        <div class="container text-center">
+            <div class="section-label">05 / Architecture</div>
+            <h2 class="section-heading mb-5">Product Journey</h2>
+
+            <div class="horizontal-scroll-container animate-up">
+                <div class="journey-track">
+                    <a href="#auth" class="node" style="text-decoration:none; color:inherit;">Landing</a>
+                    <div class="connector"></div>
+                    <a href="#onboarding" class="node" style="text-decoration:none; color:inherit;">Setup</a>
+                    <div class="connector"></div>
+                    <a href="#onboarding" class="node active" style="text-decoration:none; color:inherit;">Onboarding</a>
+                    <div class="connector"></div>
+                    <a href="#dashboard" class="node" style="text-decoration:none; color:inherit;">Dashboard</a>
+                    <div class="connector"></div>
+                    <a href="#transactions" class="node" style="text-decoration:none; color:inherit;">Logging</a>
+                    <div class="connector"></div>
+                    <a href="#forecasting" class="node highlight" style="text-decoration:none; color:inherit;">Forecasting</a>
+                    <div class="connector"></div>
+                    <a href="#finpilot" class="node" style="text-decoration:none; color:inherit;">FinPilot AI</a>
+                    <div class="connector"></div>
+                    <a href="#tax-and-empty" class="node" style="text-decoration:none; color:inherit;">Tax</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. AUTHENTICATION SCREENS -->
+    <section class="showcase-section section-spacing" id="auth">
+        <div class="container">
+            <div class="text-center max-w-lg mx-auto mb-5 animate-up">
+                <div class="section-label">06 / Entry Point</div>
+                <h2 class="section-heading">Frictionless Authentication</h2>
+                <p class="paragraph">A seamless gateway into the product utilizing glassmorphism and soft glows to
+                    establish the brand's premium aesthetic immediately.</p>
+            </div>
+
+            <div class="browser-mockup shadow-glow animate-up">
+                <div class="browser-header">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
+                <div class="image-placeholder desktop-screen">
+                    <img loading="lazy" src="Signup (Completed).png" alt="Signup Screen">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. ONBOARDING EXPERIENCE -->
+    <section class="showcase-section section-spacing" id="onboarding">
+        <div class="container">
+            <div class="grid-2 align-center alternating-row reverse">
+                <div class="text-content pl-lg animate-up">
+                    <div class="section-label">07 / Data Collection</div>
+                    <h2 class="section-heading">Contextual Onboarding</h2>
+                    <p class="paragraph mb-3">Critical for forecasting accuracy, this flow gathers essential inputs
+                        without overwhelming the user through a guided, step-by-step approach.</p>
+                    <ul class="clean-list bordered">
+                        <li>Personal Information & Context</li>
+                        <li>Income Sources & Categories</li>
+                        <li>Financial Goals Alignment</li>
+                        <li>Location & Tax Rule Setup</li>
+                    </ul>
+                </div>
+                <div class="browser-mockup subtle-shadow animate-up">
+                    <div class="browser-header">
+                        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    </div>
+                    <div class="image-placeholder theme-switchable">
+                        <img loading="lazy" src="onboarding - personal details (Completed).png" alt="Onboarding Flow" id="img-onboarding" 
+                            data-idx="0" data-screens="onboarding - personal details (Completed).png,onboarding - financial details (Completed).png,onboarding - financial details pt2 (Completed).png,onboarding - tax details (Completed).png,onboarding - financial goals.png,onboarding - financial goals pt2 (Completed).png">
+                        <button class="theme-toggle-btn" onclick="nextEmptyState('img-onboarding', this)">
+                            <i data-lucide="arrow-right"></i>
+                            Next Step
+                        </button
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. DASHBOARD OVERVIEW -->
+    <section class="showcase-section bg-dark section-spacing" id="dashboard">
+        <div class="container text-center">
+            <div class="section-label text-accent">08 / The Hub</div>
+            <h2 class="section-heading text-white">The Central Dashboard</h2>
+            <p class="paragraph text-gray-300 max-w-lg mx-auto mb-5">
+                A highly modular, card-based layout ensuring complex financial data remains scannable, actionable, and
+                visually harmonious. Showcasing both light and dark themes.
+            </p>
+
+            <!-- Carousel dots -->
+            <div class="carousel-dots mb-4" id="dots-dashboard">
+                <button class="carousel-dot active" onclick="goToDashSlide(0)" aria-label="Screen 1"></button>
+                <button class="carousel-dot" onclick="goToDashSlide(1)" aria-label="Screen 2"></button>
+            </div>
+
+            <div class="stacked-mockups animate-up">
+                <div class="browser-mockup shadow-glow">
+                    <div class="browser-header" id="header-dashboard">
+                        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    </div>
+                    <div class="image-placeholder theme-switchable">
+                        <img loading="lazy" src="dashboard.png" alt="Dashboard Hub" id="img-dashboard"
+                            data-idx="0"
+                            data-light="dashboard.png,dashboard pt-2 (completed).png"
+                            data-dark="dashboard (dark).png,dashboard pt-2 dark.png">
+                        <!-- Controls: absolute overlay -->
+                        <div style="position:absolute;bottom:20px;right:20px;display:flex;gap:10px;z-index:10;">
+                            <button class="theme-toggle-btn" style="position:relative;bottom:0;right:0;box-shadow:none;"
+                                onclick="nextCarouselState('img-dashboard','dots-dashboard')">
+                                <i data-lucide="arrow-right"></i>
+                                Next Screen
+                            </button>
+                            <button class="theme-toggle-btn" style="position:relative;bottom:0;right:0;box-shadow:none;"
+                                id="btn-dash-theme"
+                                onclick="toggleTheme('img-dashboard', this, 'header-dashboard')">
+                                <i data-lucide="moon"></i>
+                                Dark Mode
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. TRANSACTION LOGGING -->
+    <section class="showcase-section section-spacing" id="transactions">
+        <div class="container">
+            <div class="grid-2 align-center alternating-row">
+                <div class="text-content pr-lg animate-up">
+                    <div class="section-label">09 / Input</div>
+                    <h2 class="section-heading">Transaction Logging</h2>
+                    <p class="paragraph mb-3">Structured transaction input directly feeds and improves the forecasting
+                        engine's accuracy. The interface prioritizes speed and categorization.</p>
+
+                    <div class="feature-pills mt-4">
+                        <span class="pill-outline">Quick-add Modal</span>
+                        <span class="pill-outline">Smart Calendar</span>
+                        <span class="pill-outline">Auto-classification</span>
+                    </div>
+                </div>
+                <div class="browser-mockup subtle-shadow animate-up">
+                    <div class="browser-header">
+                        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    </div>
+                    <div class="image-placeholder theme-switchable">
+                        <img loading="lazy" src="expense log (completed).png" alt="Transaction Logging Modal" id="img-transactions"
+                            data-idx="0"
+                            data-light="expense log (completed).png,expense log pt2 (completed).png" 
+                            data-dark="expense log (dark).png,expense log pt2 (dark).png">
+                        <div style="position: absolute; bottom: 24px; right: 24px; display: flex; gap: 12px; z-index: 10;">
+                            <button class="theme-toggle-btn" style="position: relative; bottom: 0; right: 0; box-shadow: none;" onclick="nextCarouselState('img-transactions')">
+                                <i data-lucide="arrow-right"></i>
+                                Next Input
+                            </button>
+                            <button class="theme-toggle-btn" style="position: relative; bottom: 0; right: 0; box-shadow: none;" onclick="toggleTheme('img-transactions', this)">
+                                <i data-lucide="moon"></i>
+                                Dark Mode
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. FINANCIAL FORECASTING -->
+    <section class="showcase-section bg-subtle section-spacing" id="forecasting">
+        <div class="container text-center">
+            <div class="section-label">10 / Core Value</div>
+            <h2 class="section-heading">Seeing the Future</h2>
+            <p class="paragraph max-w-lg mx-auto mb-5">
+                Visual algorithms project cash flows to help users anticipate financial problems and liquidity gaps long
+                before they occur.
+            </p>
+
+            <div class="browser-mockup shadow-glow animate-up mb-5">
+                <div class="browser-header" id="header-forecasting">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
+                <div class="image-placeholder theme-switchable">
+                    <img loading="lazy" src="cash flow (completed).png" alt="Cash Flow Forecast Graph" id="img-forecasting"
+                        data-light="cash flow (completed).png" data-dark="cash flow (dark).png">
+                    <button class="theme-toggle-btn"
+                        onclick="toggleTheme('img-forecasting', this, 'header-forecasting')">
+                        <i data-lucide="moon"></i>
+                        Dark Mode
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid-3 mt-5 text-left animate-up" style="transition-delay: 0.2s;">
+                <div class="content-box">
+                    <h4 class="mb-1">Predicted vs Actual</h4>
+                    <p class="text-sm text-secondary">Track variances to refine budget.</p>
+                </div>
+                <div class="content-box">
+                    <h4 class="mb-1">Risk Levels</h4>
+                    <p class="text-sm text-secondary">Visual indicators for low balance events.</p>
+                </div>
+                <div class="content-box">
+                    <h4 class="mb-1">Long-term Projections</h4>
+                    <p class="text-sm text-secondary">Track your trajectory over years.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ML ARCHITECTURE SECTION -->
+    <section class="arch-section section-spacing" id="ml-architecture">
+        <div class="container">
+            <div class="section-label text-accent">11 / ML Architecture</div>
+            <h2 class="section-heading">How ForeCash thinks.</h2>
+            <p class="paragraph text-secondary max-w-lg mb-6">ForeCash doesn't just display numbers — it learns from them. Here's the model powering the forecast engine.</p>
+
+            <div class="arch-ml-grid animate-up">
+                <div class="arch-ml-card">
+                    <div class="arch-ml-icon"><i data-lucide="git-branch"></i></div>
+                    <h4>Forecasting Models</h4>
+                    <p class="text-secondary text-sm">A hybrid of <strong>ARIMA</strong> (AutoRegressive Integrated Moving Average) for trend detection and a lightweight <strong>LSTM neural network</strong> for capturing non-linear spending patterns. The ensemble model adapts as more transaction history accumulates.</p>
+                    <div class="arch-ml-tag">ARIMA &bull; LSTM &bull; Ensemble</div>
+                </div>
+                <div class="arch-ml-card">
+                    <div class="arch-ml-icon"><i data-lucide="database"></i></div>
+                    <h4>Data Pipeline</h4>
+                    <p class="text-secondary text-sm">Transactions are entered manually by the user — amount, category, date, and recurrence. Each entry is normalised and classified using a fine-tuned categorisation model, then stored as time-series data. Outliers are flagged and excluded from forecast windows.</p>
+                    <div class="arch-ml-tag">Manual Entry &bull; Normalise &bull; Categorise &bull; Store</div>
+                </div>
+                <div class="arch-ml-card">
+                    <div class="arch-ml-icon"><i data-lucide="cpu"></i></div>
+                    <h4>Prediction Logic</h4>
+                    <p class="text-secondary text-sm">The forecast engine generates a <strong>rolling 90-day cash flow projection</strong>, updated nightly. It factors recurring transactions, seasonal patterns, user-defined goals, and income variability to surface confidence intervals rather than single-point predictions.</p>
+                    <div class="arch-ml-tag">90-day horizon &bull; Confidence bands &bull; Live updates</div>
+                </div>
+            </div>
+
+            <!-- ML Pipeline Diagram -->
+            <div class="ml-pipeline animate-up mt-5">
+                <h3 class="subsection-heading mb-4" style="text-align:center;">ML System Pipeline</h3>
+                <div class="ml-pipe-flow">
+
+                    <div class="ml-pipe-node">
+                        <div class="ml-pipe-icon"><i data-lucide="user"></i></div>
+                        <div class="ml-pipe-label">User Transactions</div>
+                        <div class="ml-pipe-sub">Manual entry — amount, category, recurrence</div>
+                    </div>
+                    <div class="ml-pipe-arrow"><i data-lucide="arrow-down"></i></div>
+
+                    <div class="ml-pipe-node">
+                        <div class="ml-pipe-icon"><i data-lucide="filter"></i></div>
+                        <div class="ml-pipe-label">Data Pipeline</div>
+                        <div class="ml-pipe-sub">Normalise, categorise, deduplicate, flag outliers</div>
+                    </div>
+                    <div class="ml-pipe-arrow"><i data-lucide="arrow-down"></i></div>
+
+                    <div class="ml-pipe-node">
+                        <div class="ml-pipe-icon"><i data-lucide="database"></i></div>
+                        <div class="ml-pipe-label">Time Series Store</div>
+                        <div class="ml-pipe-sub">Structured daily cash flow snapshots per user</div>
+                    </div>
+                    <div class="ml-pipe-arrow"><i data-lucide="arrow-down"></i></div>
+
+                    <div class="ml-pipe-node ml-pipe-node--accent">
+                        <div class="ml-pipe-icon"><i data-lucide="brain"></i></div>
+                        <div class="ml-pipe-label">ARIMA + LSTM</div>
+                        <div class="ml-pipe-sub">Trend detection + non-linear pattern learning</div>
+                    </div>
+                    <div class="ml-pipe-arrow"><i data-lucide="arrow-down"></i></div>
+
+                    <div class="ml-pipe-node ml-pipe-node--accent">
+                        <div class="ml-pipe-icon"><i data-lucide="activity"></i></div>
+                        <div class="ml-pipe-label">Forecast Engine</div>
+                        <div class="ml-pipe-sub">90-day rolling projection with confidence intervals</div>
+                    </div>
+                    <div class="ml-pipe-arrow"><i data-lucide="arrow-down"></i></div>
+
+                    <div class="ml-pipe-node ml-pipe-node--output">
+                        <div class="ml-pipe-icon"><i data-lucide="layout-dashboard"></i></div>
+                        <div class="ml-pipe-label">Dashboard + AI Assistant</div>
+                        <div class="ml-pipe-sub">Visualised forecast · FinPilot natural language Q&amp;A</div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="sysarch-section bg-dark section-spacing" id="system-architecture">
+        <div class="container">
+            <div class="section-label text-accent">12 / System Architecture</div>
+            <h2 class="section-heading text-white">End-to-end data flow.</h2>
+            <p class="paragraph text-gray-300 max-w-lg mb-6">From a user tapping &ldquo;Add transaction&rdquo; to a forecast appearing on screen &mdash; here's how each layer connects.</p>
+
+            <div class="sysarch-flow animate-up">
+                <div class="sysarch-node">
+                    <div class="sysarch-icon"><i data-lucide="user"></i></div>
+                    <div class="sysarch-label">User</div>
+                    <div class="sysarch-sublabel">Inputs transactions, goals &amp; settings</div>
+                </div>
+                <div class="sysarch-arrow"><i data-lucide="arrow-right"></i></div>
+                <div class="sysarch-node">
+                    <div class="sysarch-icon"><i data-lucide="receipt"></i></div>
+                    <div class="sysarch-label">Transaction Data</div>
+                    <div class="sysarch-sublabel">Categorised, validated time-series store</div>
+                </div>
+                <div class="sysarch-arrow"><i data-lucide="arrow-right"></i></div>
+                <div class="sysarch-node sysarch-node--accent">
+                    <div class="sysarch-icon"><i data-lucide="cpu"></i></div>
+                    <div class="sysarch-label">ML Model</div>
+                    <div class="sysarch-sublabel">ARIMA + LSTM ensemble, batch updated nightly</div>
+                </div>
+                <div class="sysarch-arrow"><i data-lucide="arrow-right"></i></div>
+                <div class="sysarch-node">
+                    <div class="sysarch-icon"><i data-lucide="bar-chart-2"></i></div>
+                    <div class="sysarch-label">Forecast Engine</div>
+                    <div class="sysarch-sublabel">90-day projections with confidence bands</div>
+                </div>
+                <div class="sysarch-arrow"><i data-lucide="arrow-right"></i></div>
+                <div class="sysarch-node">
+                    <div class="sysarch-icon"><i data-lucide="layout-dashboard"></i></div>
+                    <div class="sysarch-label">UI</div>
+                    <div class="sysarch-sublabel">Dashboard, FinPilot AI &amp; Tax Assistant</div>
+                </div>
+            </div>
+
+            <div class="sysarch-detail-grid animate-up">
+                <div class="sysarch-detail">
+                    <i data-lucide="shield"></i>
+                    <div>
+                        <strong class="text-white">Security</strong>
+                        <p class="text-gray-400 text-sm">All financial data is encrypted at rest (AES-256) and in transit (TLS 1.3). No raw credentials are stored.</p>
+                    </div>
+                </div>
+                <div class="sysarch-detail">
+                    <i data-lucide="refresh-cw"></i>
+                    <div>
+                        <strong class="text-white">Sync Cadence</strong>
+                        <p class="text-gray-400 text-sm">Transactions sync every 4 hours; forecast recalculates nightly at 2am with the latest data window.</p>
+                    </div>
+                </div>
+                <div class="sysarch-detail">
+                    <i data-lucide="layers"></i>
+                    <div>
+                        <strong class="text-white">Scalability</strong>
+                        <p class="text-gray-400 text-sm">Microservices architecture. The ML inference layer scales independently from the transaction API and UI serving layer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. AI FINANCIAL ASSISTANT (FINPILOT) -->
+    <section class="showcase-section section-spacing" id="finpilot">
+        <div class="container">
+            <div class="grid-2 align-center alternating-row reverse">
+                <div class="text-content pl-lg animate-up">
+                    <div class="section-label text-accent">11 / Intelligence</div>
+                    <h2 class="section-heading">FinPilot AI</h2>
+                    <p class="paragraph mb-4">Conversational interfaces drastically reduce the cognitive load of complex
+                        financial analysis, replacing complex tables with plain-English insights.</p>
+
+                    <div class="glass-prompt mb-2">"Can I buy a $1,200 laptop next week?"</div>
+                    <div class="glass-prompt mb-2">"Will my balance drop before my next salary?"</div>
+                    <div class="glass-prompt">"How should I adjust my savings this month?"</div>
+                </div>
+                <div class="browser-mockup subtle-shadow animate-up">
+                    <div class="browser-header" id="header-finpilot">
+                        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    </div>
+                    <div class="image-placeholder theme-switchable">
+                        <img loading="lazy" src="FinPilot (completed).png" alt="FinPilot AI Assistant Chat" id="img-finpilot"
+                            data-idx="0"
+                            data-light="FinPilot (completed).png,FinPilot pt2 (completed).png" 
+                            data-dark="FinPilot (dark).png,FinPilot pt2 (dark).png">
+                        <div style="position: absolute; bottom: 24px; right: 24px; display: flex; gap: 12px; z-index: 10;">
+                            <button class="theme-toggle-btn" style="position: relative; bottom: 0; right: 0; box-shadow: none;" onclick="nextCarouselState('img-finpilot')">
+                                <i data-lucide="arrow-right"></i>
+                                Next Output
+                            </button>
+                            <button class="theme-toggle-btn" style="position: relative; bottom: 0; right: 0; box-shadow: none;" onclick="toggleTheme('img-finpilot', this, 'header-finpilot')">
+                                <i data-lucide="moon"></i>
+                                Dark Mode
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. TAX ASSISTANT & 14. EMPTY STATES -->
+    <section class="showcase-section bg-subtle section-spacing" id="tax-and-empty">
+        <div class="container">
+            <!-- Tax -->
+            <div class="text-center max-w-lg mx-auto mb-5 animate-up">
+                <div class="section-label">12 / Optimization</div>
+                <h2 class="section-heading">Tax Assistant</h2>
+                <p class="paragraph">Calculates tax liability projections and optimization suggestions dynamically.</p>
+            </div>
+
+            <div class="browser-mockup shadow-glow animate-up mb-6">
+                <div class="browser-header" id="header-tax">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
+                <div class="image-placeholder theme-switchable">
+                    <img loading="lazy" src="tax assistant (completed).png" alt="Tax Optimization Dashboard" id="img-tax"
+                        data-light="tax assistant (completed).png" data-dark="tax assistant (dark).png">
+                    <button class="theme-toggle-btn" onclick="toggleTheme('img-tax', this, 'header-tax')">
+                        <i data-lucide="moon"></i>
+                        Dark Mode
+                    </button>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Empty States -->
+            <div class="text-center max-w-lg mx-auto mt-6 mb-5 animate-up">
+                <div class="section-label">13 / EDGE CASES</div>
+                <h2 class="section-heading">Empty States</h2>
+                <p class="paragraph">Guiding users when data is unavailable is critical to building trust and
+                    encouraging account completion.</p>
+            </div>
+
+            <div class="browser-mockup subtle-shadow animate-up">
+                <div class="browser-header">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
+                <div class="image-placeholder theme-switchable">
+                    <img loading="lazy" src="dashboard empty state.png" alt="Dashboard Empty State" id="img-empty-states" data-idx="0"
+                        data-screens="dashboard empty state.png,expense log empty state.png,cash flow empty state.png,FinPilot empty state.png,tax assistant empty state.png">
+                    <button class="theme-toggle-btn" onclick="nextEmptyState('img-empty-states', this)">
+                        <i data-lucide="arrow-right"></i>
+                        Next Screen
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SETTINGS SECTION -->
+    <section class="showcase-section section-spacing" id="settings">
+        <div class="container text-center">
+            <div class="section-label">14 / Configuration</div>
+            <h2 class="section-heading">Settings &amp; Preferences</h2>
+            <p class="paragraph text-secondary max-w-lg mx-auto mb-4">
+                Users configure income, recurring expenses, savings goals, and tax region. Clear, progressive disclosure
+                keeps onboarding feeling lightweight.
+            </p>
+
+            <!-- Carousel dots -->
+            <div class="carousel-dots mb-4" id="dots-settings">
+                <button class="carousel-dot active" onclick="goToSettingsSlide(0)" aria-label="Settings Screen 1"></button>
+                <button class="carousel-dot" onclick="goToSettingsSlide(1)" aria-label="Settings Screen 2"></button>
+            </div>
+
+            <div class="stacked-mockups animate-up">
+                <div class="browser-mockup subtle-shadow">
+                    <div class="browser-header" id="header-settings">
+                        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    </div>
+                    <div class="image-placeholder theme-switchable">
+                        <img loading="lazy" src="settings.png" alt="Settings" id="img-settings"
+                            data-idx="0"
+                            data-light="settings.png,settings pt-2.png"
+                            data-dark="settings (dark).png,settings pt-2 (dark).png">
+                        <div style="position:absolute;bottom:20px;right:20px;display:flex;gap:10px;z-index:10;">
+                            <button class="theme-toggle-btn" style="position:relative;bottom:0;right:0;box-shadow:none;"
+                                onclick="nextCarouselState('img-settings','dots-settings')">
+                                <i data-lucide="arrow-right"></i>
+                                Next Screen
+                            </button>
+                            <button class="theme-toggle-btn" style="position:relative;bottom:0;right:0;box-shadow:none;"
+                                id="btn-settings-theme"
+                                onclick="toggleTheme('img-settings', this, 'header-settings')">
+                                <i data-lucide="moon"></i>
+                                Dark Mode
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- USABILITY TESTING SECTION -->
+    <section class="usability-section section-spacing" id="usability">
+        <div class="container">
+            <div class="section-label text-accent">15 / Usability Testing</div>
+            <h2 class="section-heading">Validated with real users.</h2>
+            <p class="paragraph text-secondary max-w-lg mb-6">Five moderated usability sessions revealed critical friction points before development, saving significant rework time.</p>
+
+            <div class="usability-grid animate-up">
+                <!-- Participant Cards -->
+                <div class="usability-participants">
+                    <h3 class="subsection-heading mb-4">Test Participants</h3>
+                    <div class="participant-row">
+                        <div class="participant-card">
+                            <div class="participant-avatar" style="background:#4A9B5F;">U1</div>
+                            <div>
+                                <div class="participant-name">User 1</div>
+                                <div class="participant-desc">Student, 22 &mdash; First-time budgeter</div>
+                            </div>
+                        </div>
+                        <div class="participant-card">
+                            <div class="participant-avatar" style="background:#2D7A3E;">U2</div>
+                            <div>
+                                <div class="participant-name">User 2</div>
+                                <div class="participant-desc">Freelancer, 28 &mdash; Variable income</div>
+                            </div>
+                        </div>
+                        <div class="participant-card">
+                            <div class="participant-avatar" style="background:#6BBF7A;">U3</div>
+                            <div>
+                                <div class="participant-name">User 3</div>
+                                <div class="participant-desc">Salaried, 32 &mdash; Existing Mint user</div>
+                            </div>
+                        </div>
+                        <div class="participant-card">
+                            <div class="participant-avatar" style="background:#1a5e2e;">U4</div>
+                            <div>
+                                <div class="participant-name">User 4</div>
+                                <div class="participant-desc">Self-employed, 35 &mdash; Tax anxious</div>
+                            </div>
+                        </div>
+                        <div class="participant-card">
+                            <div class="participant-avatar" style="background:#4A9B5F;">U5</div>
+                            <div>
+                                <div class="participant-name">User 5</div>
+                                <div class="participant-desc">Couple finances, 30 &mdash; Joint saver</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Findings -->
+                <div class="usability-findings">
+                    <h3 class="subsection-heading mb-4">Key Findings &amp; Iterations</h3>
+                    <div class="finding-list">
+                        <div class="finding-item finding-item--fixed">
+                            <div class="finding-status"><i data-lucide="check-circle"></i> Fixed</div>
+                            <div>
+                                <strong>Onboarding felt too long</strong>
+                                <p class="text-sm text-secondary">4 of 5 users felt uncertain midway through setup. Solution: added a progress indicator and reduced steps from 7 to 5.</p>
+                            </div>
+                        </div>
+                        <div class="finding-item finding-item--fixed">
+                            <div class="finding-status"><i data-lucide="check-circle"></i> Fixed</div>
+                            <div>
+                                <strong>Forecast graph lacked context</strong>
+                                <p class="text-sm text-secondary">Users couldn't interpret the confidence bands. Solution: added an inline tooltip explaining the range in plain language.</p>
+                            </div>
+                        </div>
+                        <div class="finding-item finding-item--fixed">
+                            <div class="finding-status"><i data-lucide="check-circle"></i> Fixed</div>
+                            <div>
+                                <strong>FinPilot AI entry point was hidden</strong>
+                                <p class="text-sm text-secondary">3 of 5 users didn't discover FinPilot within 2 minutes. Solution: added a persistent floating action prompt on the dashboard.</p>
+                            </div>
+                        </div>
+                        <div class="finding-item finding-item--iteration">
+                            <div class="finding-status"><i data-lucide="refresh-cw"></i> Iterated</div>
+                            <div>
+                                <strong>Tax section naming confusion</strong>
+                                <p class="text-sm text-secondary">&ldquo;Account Balance&rdquo; label was misread as a bank balance view. Renamed to &ldquo;Tax &amp; Savings&rdquo; with a clearer icon.</p>
+                            </div>
+                        </div>
+                        <div class="finding-item finding-item--noted">
+                            <div class="finding-status"><i data-lucide="bookmark"></i> Noted</div>
+                            <div>
+                                <strong>Users wanted export to CSV</strong>
+                                <p class="text-sm text-secondary">All 5 users asked for data export. Logged as a high-priority feature for v1.1.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success metrics bar -->
+            <div class="usability-metrics animate-up">
+                <div class="usability-metric">
+                    <div class="metric-val">5/5</div>
+                    <div class="metric-label">completed onboarding</div>
+                </div>
+                <div class="usability-metric">
+                    <div class="metric-val">4.2<span style="font-size:1rem;">/5</span></div>
+                    <div class="metric-label">avg. usability score (SUS)</div>
+                </div>
+                <div class="usability-metric">
+                    <div class="metric-val">3</div>
+                    <div class="metric-label">critical issues resolved before v1</div>
+                </div>
+                <div class="usability-metric">
+                    <div class="metric-val">&lt;2min</div>
+                    <div class="metric-label">avg. time to first forecast</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 15. DESIGN SYSTEM & 16. DECISIONS -->
+    <section class="system-section bg-dark section-spacing" id="design-system">
+        <div class="container">
+            <!-- Design System Showcase -->
+            <div class="ds-header animate-up">
+                <div class="section-label text-accent">14 / UI Architecture</div>
+                <h2 class="section-heading text-white">Visual Language</h2>
+                <p class="paragraph text-gray-400 max-w-lg">The ForeCash design system is built on a deliberately restrained palette — trusting white space, strong type, and a single green accent to communicate financial clarity.</p>
+            </div>
+
+            <!-- Two-column: Colours + Fonts -->
+            <div class="ds-two-col animate-up">
+
+                <!-- Colour Palette from Brand Kit -->
+                <div class="ds-panel">
+                    <p class="ds-label">Brand Colours</p>
+                    <div class="ds-brand-chips">
+                        <!-- From the Brand Kit PNG: grey, mid-green, black, forest-green, white -->
+                        <div class="ds-brand-swatch" style="background:#C4C4C4; flex:1;">
+                            <span class="ds-swatch-label dark">Type Grey</span>
+                            <span class="ds-swatch-hex dark">#C4C4C4</span>
+                        </div>
+                        <div class="ds-brand-swatch" style="background:#77B98A; flex:1;">
+                            <span class="ds-swatch-label">Accent Green</span>
+                            <span class="ds-swatch-hex">#77B98A</span>
+                        </div>
+                        <div class="ds-brand-swatch" style="background:#000000; flex:1;">
+                            <span class="ds-swatch-label">Ink Black</span>
+                            <span class="ds-swatch-hex">#000000</span>
+                        </div>
+                        <div class="ds-brand-swatch" style="background:#4A9B5F; flex:1;">
+                            <span class="ds-swatch-label">Forest Green</span>
+                            <span class="ds-swatch-hex">#4A9B5F</span>
+                        </div>
+                        <div class="ds-brand-swatch" style="background:#FFFFFF; border: 1px solid #D1D5DB; flex:1;">
+                            <span class="ds-swatch-label dark">Pure White</span>
+                            <span class="ds-swatch-hex dark">#FFFFFF</span>
+                        </div>
+                    </div>
+
+                    <!-- Surface colours from the UI -->
+                    <p class="ds-label" style="margin-top:2rem;">Surface Tokens</p>
+                    <div class="ds-surface-row">
+                        <div class="ds-surface-chip" style="background:#E8E8E8;">
+                            <span class="ds-surface-name dark">App Background</span>
+                            <span class="ds-surface-hex dark">#E8E8E8</span>
+                        </div>
+                        <div class="ds-surface-chip" style="background:#FFFFFF; border:1px solid #e0e0e0;">
+                            <span class="ds-surface-name dark">Card Surface</span>
+                            <span class="ds-surface-hex dark">#FFFFFF</span>
+                        </div>
+                        <div class="ds-surface-chip" style="background:#000000;">
+                            <span class="ds-surface-name">Dark BG</span>
+                            <span class="ds-surface-hex">#000000</span>
+                        </div>
+                        <div class="ds-surface-chip" style="background:#1A1A1A;">
+                            <span class="ds-surface-name">Dark Card</span>
+                            <span class="ds-surface-hex">#1A1A1A</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Typography Panel -->
+                <div class="ds-panel">
+                    <p class="ds-label">Typography</p>
+
+                    <!-- Edition wordmark -->
+                    <div class="ds-font-showcase">
+                        <div class="ds-font-row">
+                            <div class="ds-font-meta">
+                                <span class="ds-font-name">Edition</span>
+                                <span class="ds-font-role">Decorative / Hero Background</span>
+                            </div>
+                            <div class="ds-font-sample" style="font-family: Edition, serif; font-size:2.2rem; letter-spacing:0.04em; color: rgba(119,185,138,0.3); line-height:1;">ForeCash</div>
+                        </div>
+
+                        <!-- Galano Grotesque Alt -->
+                        <div class="ds-font-row">
+                            <div class="ds-font-meta">
+                                <span class="ds-font-name">Galano Grotesque Alt</span>
+                                <span class="ds-font-role">Primary UI — Headers &amp; Labels</span>
+                            </div>
+                            <div class="ds-font-gal-stack">
+                                <div style="font-weight:700; font-size:1.75rem; color:#fff; line-height:1.1;">Your Spending Profile</div>
+                                <div style="font-weight:600; font-size:1.1rem; color:#C4C4C4; margin-top:0.35rem;">Cash Flow 2025</div>
+                                <div style="font-weight:500; font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; color:#77B98A; margin-top:0.5rem;">Savings Pace · Forecast Confidence</div>
+                            </div>
+                        </div>
+
+                        <!-- Proxima Nova -->
+                        <div class="ds-font-row">
+                            <div class="ds-font-meta">
+                                <span class="ds-font-name">Proxima Nova</span>
+                                <span class="ds-font-role">Body &amp; Supporting Text</span>
+                            </div>
+                            <div style="font-family:'Proxima Nova',sans-serif; color:#C4C4C4; font-size:0.9rem; line-height:1.6; max-width:280px;">
+                                Your credit score is updated Mar 24, 2025. Investments +$5,662 · Freelance +$4,662
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UI Component Strip: real app components recreated -->
+            <div class="ds-block animate-up" style="margin-top:3rem;">
+                <p class="ds-label">App UI Components</p>
+                <div class="ds-component-strip">
+
+                    <div class="ds-comp-group">
+                        <p class="ds-comp-label">Sidebar Navigation</p>
+                        <div class="ds-sidebar-mock">
+
+                            <!-- 1. Dashboard: Remix Union icon -->
+                            <div class="ds-sidebar-icon">
+                                <img loading="lazy" src="Remix/Interface Essential/Union.png" alt="Dashboard" class="ds-nav-icon-img">
+                            </div>
+
+                            <!-- 2. Expense Log: actual app icon -->
+                            <div class="ds-sidebar-icon">
+                                <img loading="lazy" src="expense-logs.png" alt="Expense Logs" class="ds-nav-icon-img">
+                            </div>
+
+                            <!-- 3. Cash Flow / Forecaster: actual app icon (ACTIVE = black circle) -->
+                            <div class="ds-sidebar-icon active-nav">
+                                <img loading="lazy" src="forecaster.png" alt="Forecaster" class="ds-nav-icon-img ds-nav-icon-img--active">
+                            </div>
+
+                            <!-- 4. Tax / Account Balance: actual app icon -->
+                            <div class="ds-sidebar-icon">
+                                <img loading="lazy" src="account-balance-fill.png" alt="Account Balance" class="ds-nav-icon-img">
+                            </div>
+
+                            <!-- 5. FinPilot AI: actual app icon -->
+                            <div class="ds-sidebar-icon">
+                                <img loading="lazy" src="finpilot.png" alt="FinPilot AI" class="ds-nav-icon-img">
+                            </div>
+
+                            <!-- gap before sun  -->
+                            <div style="height:10px;"></div>
+
+                            <!-- 6. Sun / dark-mode toggle (active = black filled) -->
+                            <div class="ds-sidebar-icon active-nav">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                                    <circle cx="12" cy="12" r="4"/>
+                                    <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"/>
+                                </svg>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="ds-comp-group">
+                        <p class="ds-comp-label">Buttons</p>
+                        <div style="display:flex;flex-direction:column;gap:0.6rem;">
+                            <button class="ds-app-btn-primary">Add Transaction</button>
+                            <button class="ds-app-btn-secondary">View Forecast</button>
+                            <div style="display:flex;gap:0.5rem;">
+                                <button class="ds-app-pill active-pill">Annually</button>
+                                <button class="ds-app-pill">Weekly</button>
+                                <button class="ds-app-pill">Daily</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mini data card matching the app -->
+                    <div class="ds-comp-group">
+                        <p class="ds-comp-label">Dashboard Card (Light)</p>
+                        <div class="ds-app-card light">
+                            <div class="ds-app-card-label">Cash Flow 2025</div>
+                            <div class="ds-app-card-value">$12.7k <span class="ds-app-badge green">+1.3%</span></div>
+                            <div class="ds-app-card-sub">vs last year</div>
+                            <div class="ds-app-card-bar"><div class="ds-app-card-fill" style="width:72%;"></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Dark version -->
+                    <div class="ds-comp-group">
+                        <p class="ds-comp-label">Dashboard Card (Dark)</p>
+                        <div class="ds-app-card dark-card">
+                            <div class="ds-app-card-label" style="color:#C4C4C4;">Tax Breakdown 2025</div>
+                            <div class="ds-app-card-value" style="color:#fff;">$7,213 <span class="ds-app-badge green">Salary</span></div>
+                            <div class="ds-app-card-sub" style="color:#777;">Updated weekly</div>
+                            <div class="ds-app-card-bar" style="background:#333;"><div class="ds-app-card-fill" style="width:58%;"></div></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="text-center mt-6 animate-up">
+                <div class="section-label text-gray-400">15 / UX Decisions</div>
+            </div>
+            <div class="grid-2 gap-lg mt-4 animate-up">
+                <div class="decision-box">
+                    <h4 class="text-white">Expandable Sidebar</h4>
+                    <p class="text-gray-400 text-sm">Navigation expands on hover to maximize dashboard data real estate
+                        while keeping tools accessible.</p>
+                </div>
+                <div class="decision-box">
+                    <h4 class="text-white">Modular Cards</h4>
+                    <p class="text-gray-400 text-sm">Allows users to customize their dashboard focus and naturally
+                        separates different semantic data types.</p>
+                </div>
+                <div class="decision-box">
+                    <h4 class="text-white">Clear Risk Indicators</h4>
+                    <p class="text-gray-400 text-sm">Color-coded warnings ensure users immediately spot potential cash
+                        flow issues.</p>
+                </div>
+                <div class="decision-box">
+                    <h4 class="text-white">Suggested Prompts</h4>
+                    <p class="text-gray-400 text-sm">AI prompt suggestions help users learn how to ask better, more
+                        analytical financial questions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 17. RESULTS & LEARNINGS -->
+    <section class="learnings-section section-spacing bg-accents" id="learnings">
+        <div class="container text-center">
+            <div class="section-label text-accent">16 / Retrospective</div>
+            <h2 class="section-heading mb-4">Reflections & Learnings</h2>
+
+            <div class="glass-panel text-left max-w-3xl mx-auto p-5 animate-up">
+                <p class="paragraph mb-4">Designing ForeCash highlighted the critical importance of <strong>clarity in
+                        financial interfaces</strong>. When users deal with their future financial stability, ambiguity
+                    induces anxiety.</p>
+                <p class="paragraph mb-4">By shifting the core interaction from <strong>tracking to
+                        forecasting</strong>, historical data became secondary context to predictive graphs. This
+                    entirely changed the data hierarchy.</p>
+                <p class="paragraph">The biggest architectural challenge was making complex predictive data visually
+                    intuitive without requiring a finance degree—emphasizing the need for minimalist charts and
+                    conversational AI translation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 18. CONCLUSION -->
+    <footer class="footer-section text-center section-spacing">
+        <div class="container text-center">
+            <h2 class="title" style="font-size: 3.5rem;">Fore<span style="color:#4A9B5F;">Cash</span></h2>
+            <p class="paragraph max-w-md mx-auto mt-2">A forward-looking financial decision tool.</p>
+            <div class="mt-5 text-sm text-secondary">
+                Designed for the future of finance.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>
